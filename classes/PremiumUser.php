@@ -9,10 +9,8 @@ class PremiumUser extends User
     public function __construct($model,$name, $lastName,$age,$card)
   {
     parent::__construct($name, $lastName,$age,$card);
-
-    $this->setModel($model);
-  
-
+        $this->setModel($model);
+    
   }
 
     /**
@@ -50,6 +48,9 @@ class PremiumUser extends User
      */ 
     public function setModel($model)
     {
+        if (!is_string($model)) {
+            throw new Exception("model is not a string");
+        }
         if ($model == "bronze") {
             $this->sconto = 40;
             $this->model = $model;
