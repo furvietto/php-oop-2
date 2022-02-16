@@ -60,6 +60,8 @@ class PremiumUser extends User
         }elseif ($model == "gold") {
             $this->sconto = 60;
             $this->model = $model;
+        }else{
+            throw new Exception("model not found");
         }
         return $this;
     }
