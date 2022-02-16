@@ -10,11 +10,10 @@ class User
   protected $phone_number;
   protected $card;
 
-  public function __construct($name, $lastname, $age, $phone_number, $card) {
+  public function __construct($name, $lastname, $age, $card) {
     $this->name = $name;
     $this->lastname = $lastname;
     $this->age = $age;
-    $this->phone_number = $phone_number;
     $this->setCard($card);
     
     }

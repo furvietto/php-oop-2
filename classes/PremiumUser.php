@@ -2,12 +2,17 @@
 require_once __DIR__."/User.php";
 class PremiumUser extends User
 {
+    
     protected $sconto;
     protected $model;
 
-    public function __construct($model)
+    public function __construct($model,$name, $lastName,$age,$card)
   {
+    parent::__construct($name, $lastName,$age,$card);
+
     $this->setModel($model);
+  
+
   }
 
     /**
@@ -47,10 +52,13 @@ class PremiumUser extends User
     {
         if ($model == "bronze") {
             $this->sconto = 40;
+            $this->model = $model;
         }elseif ($model == "argent") {
             $this->sconto = 50;
+            $this->model = $model;
         }elseif ($model == "gold") {
             $this->sconto = 60;
+            $this->model = $model;
         }
         return $this;
     }

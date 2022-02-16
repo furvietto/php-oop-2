@@ -3,14 +3,10 @@
 class Product 
 {
   protected $name;
-  protected $model;
-  protected $price;
   protected $description;
 
-  public function __construct($name, $model, $price,$description) {
+  public function __construct($name, $description) {
     $this->name = $name;
-    $this->model = $model;
-    $this->price = $price;
     $this->description = $description;
 }
 
@@ -34,45 +30,6 @@ class Product
     return $this;
   }
 
-  /**
-   * Get the value of model
-   */ 
-  public function getModel()
-  {
-    return $this->model;
-  }
-
-  /**
-   * Set the value of model
-   *
-   * @return  self
-   */ 
-  public function setModel($model)
-  {
-    $this->model = $model;
-
-    return $this;
-  }
-
-  /**
-   * Get the value of price
-   */ 
-  public function getPrice()
-  {
-    return $this->price;
-  }
-
-  /**
-   * Set the value of price
-   *
-   * @return  self
-   */ 
-  public function setPrice($price)
-  {
-    $this->price = $price;
-
-    return $this;
-  }
 
   /**
    * Get the value of description
